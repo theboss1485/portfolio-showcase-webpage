@@ -32,14 +32,77 @@ li{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    flex: 1;
     margin: auto;
+}
+
+.flex-row-work{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin: auto;
+    flex-wrap: wrap;
+    
+    
+}
+
+img {
+    width: 100%;
+    
+    text-align: center;
+}
+
+.digital-marketing-webpage {
+    width: 0 0 100%;
+    position: relative;
+    flex: 2 0 100%;
+    
+}
+
+.flex-images {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.challenge-class {
+    border: 0.25em solid lightblue;
+    margin: 0.5em;
+    flex: 0 0 calc(50% - 1.5em);
+    position: relative;
+}
+
+.image-grid {
+    display: flex;
+    flex: 0 0 75%;
+    flex-wrap: wrap;
+    
 }
 
 p {
     text-align: left;
-    width: 50%
+    width: 75%
 }
 
 h2{
-    margin-right: 3em
+    width: 10%;
+    vertical-align: top;
+    display: flex;
+}
+
+h3 {
+    position: absolute;
+    bottom: 0;
+    padding-left: 0.5em;
+    background-color:gray
+}
+
+.flex-row-contact-me{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin: auto;
 }
