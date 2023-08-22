@@ -1,3 +1,12 @@
+body {
+    margin: 0;
+    border: 0.5em solid lightblue;
+    background-color: lightgreen;
+
+
+                      
+}
+
 h1{
     margin: 0.5em
 }
@@ -8,11 +17,30 @@ nav{
     margin-left: auto;
 }
 
+#contact-information{
+    border-left: 5px solid gray;
+    width: 75%;
+    padding-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .flex-row-title-and-nav-bar{
     display: flex;
-    flex-direction: row;
+    position: relative;
     align-items: center;
+    flex-direction: row;
     height: 5em;
+    
+}
+
+
+.image-of-me{
+    height: 100%;
+    width: auto;
+    display: block;
+    min-height: auto;
 }
 
 ul{
@@ -33,6 +61,7 @@ li{
     justify-content: center;
     align-items: center;
     flex: 1;
+   
     margin: auto;
 }
 
@@ -43,6 +72,8 @@ li{
     align-items: flex-start;
     margin: auto;
     flex-wrap: wrap;
+    
+    
     
     
 }
@@ -77,18 +108,24 @@ img {
     display: flex;
     flex: 0 0 75%;
     flex-wrap: wrap;
+    padding-left: 5px;
+    border-left: 5px solid gray;
     
 }
 
 p {
     text-align: left;
-    width: 75%
+    width: 75%;
+    padding-left: 5px;
+    border-left: 5px solid gray;
 }
 
 h2{
     width: 10%;
     vertical-align: top;
     display: flex;
+    padding-right: 0.25em;
+    margin: 0 0.25em;
 }
 
 h3 {
