@@ -1,6 +1,11 @@
+html {
+    min-height:100%;
+    border: 0.5em solid lightblue;
+}
+
 body {
     margin: 0;
-    border: 0.5em solid lightblue;
+   
     background-color: lightgreen;
 
 
@@ -11,10 +16,46 @@ h1{
     margin: 0.5em
 }
 
+h2{
+    width:min-content;
+    vertical-align: top;
+    display: flex;
+    padding-right: 0.25em;
+    margin: 0 0.25em;
+    text-align: right;
+    
+}
+
+p {
+    text-align: left;
+    width: 75%;
+    padding-left: 5px;
+    border-left: 5px solid gray;
+}
+
+#image-of-me{
+    height: 100%;
+    width: auto;
+    display: block;
+    min-height: auto;
+}
+
 nav{
     width: 50%;
     display: inline;
     margin-left: auto;
+}
+
+#nav-ul{
+    list-style-type: none;
+    text-align: right;
+    margin-right: 3em;
+}
+
+li{
+    display: inline;
+    font-size: larger;
+    margin: 1.5em;
 }
 
 #contact-information{
@@ -22,6 +63,7 @@ nav{
     width: 75%;
     padding-left: 5px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -33,26 +75,6 @@ nav{
     flex-direction: row;
     height: 5em;
     
-}
-
-
-.image-of-me{
-    height: 100%;
-    width: auto;
-    display: block;
-    min-height: auto;
-}
-
-ul{
-    list-style-type: none;
-    
-    text-align: right;
-}
-
-li{
-    display: inline;
-    font-size: larger;
-    margin: 0.5em;
 }
 
 .flex-row-about-me{
@@ -72,28 +94,17 @@ li{
     align-items: flex-start;
     margin: auto;
     flex-wrap: wrap;
-    
-    
-    
-    
 }
 
 img {
     width: 100%;
-    
     text-align: center;
 }
 
 .digital-marketing-webpage {
-    width: 0 0 100%;
+    width: 100%;
     position: relative;
     flex: 2 0 100%;
-    
-}
-
-.flex-images {
-    display: flex;
-    justify-content: center;
     
 }
 
@@ -113,21 +124,6 @@ img {
     
 }
 
-p {
-    text-align: left;
-    width: 75%;
-    padding-left: 5px;
-    border-left: 5px solid gray;
-}
-
-h2{
-    width: 10%;
-    vertical-align: top;
-    display: flex;
-    padding-right: 0.25em;
-    margin: 0 0.25em;
-}
-
 h3 {
     position: absolute;
     bottom: 0;
@@ -142,4 +138,110 @@ h3 {
     align-items: center;
     flex: 1;
     margin: auto;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+
+
+    h1{
+        font-size: large;
+    }
+
+
+    .flex-row-title-and-nav-bar{
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap:wrap;
+        height: 5em;
+        
+    }
+
+    nav {
+        margin: auto;
+        width: 80%;
+    }
+
+    .flex-row-about-me{
+        flex-direction: column;
+        justify-content:right;
+        align-items: left;
+    }
+
+    .flex-row-work{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav{
+        margin: 0;
+        font-size: 0.87em;
+        flex-grow: 3;
+    }
+
+    #nav-ul{
+        list-style-type: none;
+        text-align: center;
+        margin: 1em auto 2em auto;
+
+        font-size: smaller;
+        width: 70%;
+        padding: 0.1em;
+    }
+
+
+    li {
+        margin: 0.25em;
+    }
+
+    #about-me-title{
+        margin-top: 4.5em;
+    }
+
+    h2 {
+        font-size: small;
+        flex-grow: 3;
+        width: 100%;
+        margin: 2em;
+        width: max-content;
+        text-align: center;
+    }
+
+
+
+    p {
+        margin: 0;
+        font-size: 1.00em;
+        width: 90%;
+        border: none;
+    }
+
+    .image-grid {
+        border: none;
+    }
+
+    h3{
+        font-size: smaller;
+        margin-bottom: 0;
+    }
+
+    .challenge-class{
+        flex: 0 0 calc(100% - 1em);
+        align-items: center;
+        margin: 0.5em auto 0.5em auto;
+    }
+
+    .flex-row-contact-me{
+        font-size: 0.75em;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+        
+    }
+
+    #contact-information {
+        border: none;
+    }
 }
