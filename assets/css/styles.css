@@ -19,7 +19,6 @@ h1{
 h2{
     width:15%;
     vertical-align: top;
-    display: flex;
     padding-right: 0.25em;
     margin: 0 0.1em;
     text-align: right;
@@ -50,6 +49,7 @@ nav{
     list-style-type: none;
     text-align: right;
     margin-right: 3em;
+    padding: 0.1em;
 }
 
 li{
@@ -233,10 +233,11 @@ h3 {
     #nav-ul{
         list-style-type: none;
         text-align: center;
+        width: 95%;
         margin: 1em auto 2em auto;
 
         width: 100%;
-        padding: 0.1em;
+        
     }
 
 
