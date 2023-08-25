@@ -17,7 +17,7 @@ N/A
 Here is a screenshot of the Portfolio Showcase Webpage.  Unfortnately I could only get it to fit in the height of 
 the screen by shrinking the width drastically: ![A screenshot of the Portfolio Showcase Webpage](assets/images/Webpage-Screenshot.JPG)
 
-Here is a link to the deployed webpage: [Portfolio Showcase Webpage] (https://theboss1485.github.io/portfolio-showcase-webpage/)
+Here is a link to the deployed webpage: [Portfolio Showcase Webpage](https://theboss1485.github.io/portfolio-showcase-webpage/)
 
 ## Credits
 
