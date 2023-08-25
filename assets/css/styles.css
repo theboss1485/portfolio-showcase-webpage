@@ -2,7 +2,7 @@
 the OSU flex web development bootcamp.*/
 
 /* For this stylesheet, I decided to organize selectors and attributes in alphabetical order, with  \
-higher precedence selectors at the top.*/
+lower precedence selectors towards the top.*/
 
 * {
     box-sizing: border-box;
@@ -49,8 +49,6 @@ img {
     
 }
 
-
-
 li{
     display: inline;
     font-size: larger;
@@ -71,10 +69,10 @@ p {
 }
 
 span {
-    font-weight:  none;
+    font-weight:  normal;
 }
 
-/* For the cells for projects 2-4, I made them take up have the width of the digital marketing
+/* For the cells for projects 2-5, I made them take up have the width of the digital marketing
 webpage,  so that I could have two rows of two cells underneath that image.*/
 .digital-marketing-webpage {
     border: 0.25em solid lightblue;
@@ -102,16 +100,12 @@ webpage,  so that I could have two rows of two cells underneath that image.*/
     margin: auto;
 }
 
-.flex-row-work img {
-    opacity: 35%;
-}
-
 .flex-row-title-and-nav-bar{
     align-items: center;
-    height: 5em;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    height: 5em;
     justify-content: space-between;
     overflow:hidden;
     position: relative;
@@ -126,6 +120,25 @@ webpage,  so that I could have two rows of two cells underneath that image.*/
     margin: auto;
 }
 
+.flex-row-work img {
+    opacity: 35%;
+}
+
+/* The grid of five portfolio images has its own class that's separate from the class of 
+the four images at the bottom. */
+.image-grid {
+    border-left: 5px solid gray;
+    display: flex;
+    flex: 0 0 75%;
+    flex-wrap: wrap;
+    padding-left: 5px;
+    width: 100%;
+}
+
+.image-grid img:hover {
+    opacity: 100%;
+}
+
 .projects-2-5{
     border: 0.25em solid lightblue;
     flex: 0 0 calc(50% - 1em);
@@ -133,29 +146,19 @@ webpage,  so that I could have two rows of two cells underneath that image.*/
     position: relative;
 }
 
-/* The grid of five images has its own class, which is separate from the class of 
-the four images at the bottom. */
-
-.image-grid {
-    border-left: 5px solid gray;
-    display: flex;
-    width: 100%;
-    flex: 0 0 75%;
-    flex-wrap: wrap;
-    padding-left: 5px;
-}
-
 #contact-information{
     border-left: 5px solid gray;
     display: flex;
     flex-wrap: wrap;
-    justify-content: right;
+    justify-content: center;
     padding-left: 0.25em;
     width: 75%;
 }
 
 #contact-information li {
+    text-align: center;
     width: fit-content;
+    
 }
 
 #image-of-me{
@@ -221,31 +224,48 @@ elements is variable and grows and shrinks with the viewport.*/
     }
 }
 
-/* Each of these five blocks is controlling the hover aspect of one of the images.  If I used a class to 
-try and cover all five at once, hovering over one image would cause all the images to become completely opaque.*/
-#project-1:hover img{
-    opacity: 100%;
-}
-
-#project-2:hover img{
-    opacity: 100%;
-}
-
-#project-3:hover img{
-    opacity: 100%;
-}
-
-#project-4:hover img{
-    opacity: 100%;
-}
-
-#project-5:hover img{
-    opacity: 100%;
-}
-
 /* For screens with a maximum width of  675 pixels, I wanted the title bars to display in column format.
 The height of the header at the top also changes, so the height of the image of me changes as well.*/
 @media screen and (max-width: 675px) {
+    
+    h2 {    
+        flex-grow: 3;
+        margin: 1em;
+        text-align: center;
+        width: max-content;
+    }
+
+    h3{
+        margin-bottom: 0;
+    }
+
+    li {
+        margin: 0.25em;
+    }
+
+    nav{
+        flex-grow: 3;
+        font-size: 1em;
+        margin: 0;
+    }
+
+    p {
+        border: none;
+        margin: 0;
+        width: 90%;
+    }
+
+    .flex-row-about-me{
+        flex-direction: column;
+        flex-wrap:nowrap;
+    }
+
+    .flex-row-contact-me{
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
     .flex-row-title-and-nav-bar{
         align-items: center;
         display: flex;
@@ -255,63 +275,14 @@ The height of the header at the top also changes, so the height of the image of 
         justify-content: center;
     }
 
-    #image-of-me{
-        height: 50%;
-    }
-
-    .flex-row-about-me{
-        flex-direction: column;
-        flex-wrap:nowrap;
-    }
-
     .flex-row-work{
         align-items: center;
-        justify-content: center;
         flex-direction: column;
-    }
-
-    nav{
-        flex-grow: 3;
-        font-size: 1em;
-        margin: 0;
-        
-    }
-
-    #nav-ul{
-        list-style-type: none;
-        margin: 1em auto 2em auto;
-        text-align: center;
-        width: 95%;
-    }
-
-
-    li {
-        margin: 0.25em;
-    }
-
-    #about-me-title{
-        margin-top: 1em;
-    }
-
-    h2 {    
-        flex-grow: 3;
-        margin: 1em;
-        text-align: center;
-        width: max-content;
-    }
-
-    p {
-        border: none;
-        margin: 0;
-        width: 90%;
+        justify-content: center;
     }
 
     .image-grid {
         border: none;
-    }
-
-    h3{
-        margin-bottom: 0;
     }
 
     .projects-2-5{
@@ -320,10 +291,8 @@ The height of the header at the top also changes, so the height of the image of 
         margin: 0.5em auto 0.5em auto;
     }
 
-    .flex-row-contact-me{
-        flex-direction: column;
-        flex-wrap: wrap;
-        width: 100%;
+    #about-me-title{
+        margin-top: 1em;
     }
 
     #contact-information {
@@ -331,24 +300,20 @@ The height of the header at the top also changes, so the height of the image of 
         margin-top: 0;
         
     }
-}
-/* I added an extra media query here to keep the nav bar at the top all in one line. */
-@media screen and (min-width: 615px) {
-
-    #nav-ul{
-        width: 95%;
-        margin-right: 0.5em;
-    }
 
     #image-of-me{
-        height: 100%;
+        height: 50%;
     }
-    
-    #contact-information li{
-    margin-left: 1.5em;
-    margin-right: 1.5em; 
-    min-width: 40%;
+
+    #nav-ul{
+        list-style-type: none;
+        margin: 1em auto 2em auto;
+        text-align: center;
+        width: 95%;
     }
+}
+/* I added an extra media query here to keep the top navigation bar all in one line. */
+@media screen and (min-width: 615px) {
 
     .flex-row-title-and-nav-bar{
         align-items: center;
@@ -358,24 +323,39 @@ The height of the header at the top also changes, so the height of the image of 
         height: 5em;
         justify-content: center;
     }
-}
-
-/* This media query keeps the  content from becoming too big at large screen sizes.*/
-@media screen and (min-width: 1550px) {
 
     #contact-information li{
-    min-width: 40%;
-    flex-basis: 25%;
-    margin-left: 0.5em;
-    margin-right: 0.5em; 
+        margin-left: 1.5em;
+        margin-right: 1.5em; 
+        min-width: 40%;
     }
 
-    .width-75 {
-        width: 85%;
-        margin: auto;
+    #image-of-me{
+        height: 100%;
     }
+
+    #nav-ul{
+        margin-right: 0.5em;
+        width: 95%;
+    }
+}
+
+/* This media query keeps the content from becoming too big at large screen sizes.*/
+@media screen and (min-width: 1550px) {
 
     h2 {
         width: 6%;
+    }
+    
+    .width-75 {
+        margin: auto;
+        width: 85%;
+    }
+
+    #contact-information li{
+        flex-basis: 25%;
+        margin-left: 0.5em;
+        margin-right: 0.5em; 
+        min-width: 40%;
     }
 }
