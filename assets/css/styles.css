@@ -144,6 +144,8 @@ the four images at the bottom. */
     flex: 0 0 calc(50% - 1em);
     margin: 0.5em;
     position: relative;
+    height: 10.5codeem;
+    overflow: hidden;
 }
 
 #contact-information{
