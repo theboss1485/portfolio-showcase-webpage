@@ -226,6 +226,21 @@ elements is variable and grows and shrinks with the viewport.*/
     }
 }
 
+@media screen and (min-width: 676px) and (max-width: 900px){
+
+    h3 {
+        font-size: 1.5vw
+    }
+
+    p {
+        font-size: 4vw;
+    }
+
+    ul {
+        font-size: 3.5vw;
+    }
+} 
+
 /* For screens with a maximum width of  675 pixels, I wanted the title bars to display in column format.
 The height of the header at the top also changes, so the height of the image of me changes as well.*/
 @media screen and (max-width: 675px) {
